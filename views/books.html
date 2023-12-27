@@ -1,0 +1,34 @@
+<div ng-controller="BooksController as ctrl">
+  <div class="row mt-5">
+    <div class="col-12 col-lg-6 mx-auto">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          ng-model="ctrl.searchQuery"
+          placeholder="Search"
+          aria-label="Search"
+          aria-describedby="button-addon"
+        />
+        <button class="btn btn-outline-secondary" type="button" id="button-addon" ng-click="ctrl.searchBooks()">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <md-content class="_md layout-row layout-wrap">
+    <book-item ng-repeat="book in ctrl.books" class="layout flex-sm-50 flex-md-33 flex-lg-20 w-100" book="book">1</book-item>
+  </md-content>
+  <div ng-if="ctrl.books.length">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <button class="page-link" ng-click="ctrl.prevPage()">Previous</button>
+        </li>
+        <li class="page-item">
+          <button class="page-link" ng-click="ctrl.nextPage()">Next</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

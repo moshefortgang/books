@@ -1,0 +1,26 @@
+<md-card class="w-100">
+  <md-card-title>
+    <md-card-title-text>
+      <span class="">{{book.volumeInfo.title}}</span>
+      <span class="md-subhead">{{book.volumeInfo.publisher}}</span>
+    </md-card-title-text>
+    <md-card-title-media>
+      <img
+        ng-src="{{book.volumeInfo.imageLinks.thumbnail}}"
+        class="md-media-sm card-media"
+        alt="{{book.volumeInfo.imageLinks.smallThumbnail}}"
+      />
+    </md-card-title-media>
+  </md-card-title>
+  <md-card-actions layout="row" layout-align="end center">
+		<ng-md-icon
+      ng-click="markAs(!isFavorite)"
+      icon="favorite"
+      ng-style="{ 'fill': isFavorite ? 'red' : 'grey' }"
+      size="32"
+    >
+    </ng-md-icon>
+    <md-button ng-click="showDialog($event)" class="md-raised"> More </md-button>
+
+  </md-card-actions>
+</md-card>

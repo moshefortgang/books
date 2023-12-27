@@ -1,0 +1,16 @@
+<!-- dialog.html -->
+<md-dialog aria-label="Book Details">
+  <div class="md-dialog-content">
+    <div class="book-details">
+      <h2>{{ ctrl.book.volumeInfo.title }}</h2>
+      <p><strong>Published Date:</strong> {{ ctrl.book.volumeInfo.publishedDate }}</p>
+      <p><strong>Page Count:</strong> {{ ctrl.book.volumeInfo.pageCount }}</p>
+      <p><strong>Preview Link:</strong> <a href="{{ ctrl.book.volumeInfo.previewLink }}" target="_blank">{{ ctrl.book.volumeInfo.previewLink }}</a></p>
+    </div>
+  </div>
+  <md-dialog-actions layout="row" layout-align="end center">
+    <md-button ng-click="ctrl.closeDialog()" >
+      Close
+    </md-button>
+  </md-dialog-actions>
+</md-dialog>

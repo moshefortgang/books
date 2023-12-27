@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-local-storage": "^0.7.1",
+    "angular-material": "^1.2.5",
+    "angular-material-icons": "^0.7.1",
+    "angular-ui-bootstrap": "^2.5.6",
+    "angular-ui-router": "^1.0.30",
+    "bootstrap": "^5.3.2"
+  },
+  "scripts": {
+    "update-deps": "npm update",
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8081 -c-1",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver"
+  }
+}

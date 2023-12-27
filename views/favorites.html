@@ -1,0 +1,8 @@
+<div ng-controller="FavoritesController as ctrl">
+  <md-content class="_md layout-row layout-wrap">
+		<book-item ng-repeat="book in ctrl.favoriteBooks" class="layout flex-sm-50 flex-md-33 flex-lg-20 w-100" book="book">1</book-item>
+		<div class="w-100 text-center" ng-show="!ctrl.favoriteBooks.length">
+			<h1 class="mx-auto mt-5">No favorite books found.</h1>
+    </div>
+  </md-content>
+</div>
